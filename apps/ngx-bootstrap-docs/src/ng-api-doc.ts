@@ -4217,6 +4217,12 @@ export const ngdoc: any = {
     "selector": "timepicker",
     "inputs": [
       {
+        "name": "allowEmptyTime",
+        "defaultValue": "false",
+        "type": "boolean",
+        "description": "<p>if true emptyTime is not marked as invalid</p>\n"
+      },
+      {
         "name": "arrowkeys",
         "defaultValue": "true",
         "type": "boolean",
