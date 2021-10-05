@@ -51,4 +51,22 @@ describe('datepicker-inner:', () => {
     });
 
   });
+
+  describe('ngOnChanges', () => {
+    it('should call refreshView method', () => {
+      const refreshExpected = jest.spyOn(component, 'refreshView');
+      
+      component.ngOnChanges({});
+      
+      expect(refreshExpected).toHaveBeenCalled();
+    });
+
+    it('should call checkIfActiveDateGotUpdate method', () => {
+      const checkExpected = jest.spyOn(component, 'checkIfActiveDateGotUpdated');
+
+      component.ngOnChanges({activeDate: null});
+
+      expect(checkExpected).toHaveBeenCalledWith(null);
+    });
+  });
 });
